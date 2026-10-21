@@ -2,113 +2,207 @@
 <html lang="id">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#050509">
-<title>ALWI — Creator Space</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#050816">
+<title>NEXORA — Your Tools. Your Power.</title>
 <style>
+:root{--bg:#050816;--line:#7c9cff42;--cyan:#62eaff;--muted:#aebbe0;--white:#f6f8ff}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-:root{--bg:#050509;--text:#f4f7ff;--muted:#8d91a3;--neon:#6dffb8;--cyan:#55eaff;--purple:#8b6cff;--pink:#ff63c7}
-body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,Arial,sans-serif;overflow-x:hidden}
-body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:20;opacity:.035;background-image:radial-gradient(#fff .7px,transparent .7px);background-size:5px 5px}
-.bg{position:fixed;inset:-25%;z-index:-5;filter:blur(75px);background:
-radial-gradient(circle at 20% 25%,#55eaff35,transparent 20%),
-radial-gradient(circle at 78% 20%,#8b6cff3d,transparent 22%),
-radial-gradient(circle at 55% 75%,#ff63c72b,transparent 24%),
-radial-gradient(circle at 20% 90%,#6dffb81c,transparent 20%);animation:move 14s ease-in-out infinite alternate}
-@keyframes move{to{transform:translate3%,4%) scale(1.08) rotate(8deg)}}
-.grid{position:fixed;inset:0;z-index:-4;opacity:.08;background-image:linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px);background-size:70px 70px;mask-image:linear-gradient(#000,transparent 75%)}
-.cursor{position:fixed;width:26px;height:26px;border:1px solid #6dffb899;border-radius:50%;pointer-events:none;z-index:100;transform:translate(-50%,-50%);mix-blend-mode:screen;transition:width .2s,height .2s,background .2s;display:none}
-nav{position:sticky;top:12px;z-index:30;width:min(950px,calc(100% - 28px));height:58px;margin:12px auto 0;padding:0 17px;display:flex;align-items:center;justify-content:space-between;border:1px solid #ffffff18;border-radius:18px;background:#ffffff09;backdrop-filter:blur(24px) saturate(160%);box-shadow:inset 0 1px #ffffff18,0 15px 50px #0008}
-.logo{font-size:20px;font-weight:950;letter-spacing:-2px}.logo i{font-style:normal;color:var(--neon)}
-nav a{font-size:9px;letter-spacing:1.5px;color:#9ca0ae;text-decoration:none;margin-left:16px}
-main{width:min(950px,calc(100% - 28px));margin:auto}
-.hero{min-height:calc(100svh - 82px);display:flex;flex-direction:column;justify-content:center;position:relative}
-.status{width:max-content;border:1px solid #6dffb833;background:#6dffb80b;color:#a9b0bf;padding:8px 12px;border-radius:999px;font-size:9px;letter-spacing:1px;box-shadow:0 0 30px #6dffb80d}
-.status b{color:var(--neon)}
-.kicker{margin-top:28px;color:#777c8c;font-size:9px;letter-spacing:4px}
-h1{font-size:clamp(78px,19vw,175px);line-height:.78;letter-spacing:-10px;margin:12px 0 0;background:linear-gradient(105deg,#fff 8%,#a9ffff 35%,#8e79ff 68%,#ff8bdc);-webkit-background-clip:text;color:transparent;filter:drop-shadow(0 0 30px #8b6cff22)}
-.tag{font-size:clamp(17px,4vw,28px);font-weight:800;margin-top:28px}.tag span{color:var(--neon)}
-.desc{max-width:570px;color:var(--muted);font-size:12px;line-height:1.8}
-.actions{display:flex;gap:9px;margin-top:25px}.btn{display:inline-block;padding:13px 16px;border-radius:13px;text-decoration:none;font-size:9px;font-weight:850;letter-spacing:1px;transition:.25s}
-.btn:hover{transform:translateY(-3px)}.primary{color:#07100b;background:linear-gradient(135deg,#d7fff0,#6dffb8);box-shadow:0 0 30px #6dffb826}.ghost{color:#ddd;border:1px solid #ffffff1c;background:#ffffff08;backdrop-filter:blur(14px)}
-.float{position:absolute;right:4%;bottom:15%;width:110px;height:110px;border:1px solid #ffffff12;border-radius:50%;box-shadow:0 0 80px #8b6cff20;animation:spin 9s linear infinite}
-.float:before{content:"";position:absolute;width:9px;height:9px;border-radius:50%;top:7px;left:50%;background:var(--neon);box-shadow:0 0 22px var(--neon)}
-@keyframes spin{to{transform:rotate(360deg)}}
-section{padding:80px 0}.eyebrow{color:var(--neon);font-size:9px;letter-spacing:3px;margin-bottom:16px}.rule{height:1px;background:linear-gradient(90deg,#6dffb855,#8b6cff25,transparent);margin-bottom:18px}
-.glass{position:relative;overflow:hidden;border:1px solid #ffffff18;border-radius:27px;background:linear-gradient(135deg,#ffffff13,#ffffff05 45%,#ffffff0a);backdrop-filter:blur(25px) saturate(150%);box-shadow:inset 0 1px #ffffff22,inset 0 -1px #ffffff07,0 25px 80px #0009;transform-style:preserve-3d}
-.glass:before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:linear-gradient(90deg,transparent,#fff9,transparent);opacity:.35}
-.glass:after{content:"";position:absolute;width:160px;height:160px;right:-80px;top:-80px;border-radius:50%;background:#8b6cff;filter:blur(65px);opacity:.13}
-.about{padding:31px}.about h2{font-size:clamp(35px,7vw,62px);line-height:.95;letter-spacing:-3px;margin:0}.about h2 span{color:#858a9a}
-.text{color:var(--muted);font-size:12px;line-height:1.85;max-width:610px}
-.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:13px}.card{min-height:260px;padding:24px;transition:transform .35s ease,border-color .35s ease}.card:hover{border-color:#6dffb844}
-.card .num{font-size:8px;letter-spacing:2px;color:#555b6b}.icon{font-size:34px;color:var(--cyan);text-shadow:0 0 25px #55eaff55;margin:38px 0 13px}.card h3{margin:0 0 8px;font-size:19px}.card a{position:absolute;bottom:23px;color:var(--neon);font-size:8px;letter-spacing:1.5px;text-decoration:none}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid #ffffff12;border-radius:20px;overflow:hidden;background:#ffffff08}.stat{text-align:center;padding:26px 8px;border-right:1px solid #ffffff0c}.stat:last-child{border:0}.stat b{display:block;font-size:28px;background:linear-gradient(90deg,#fff,var(--neon));-webkit-background-clip:text;color:transparent}.stat span{font-size:8px;color:#686d7d;letter-spacing:1.5px}
-.contact{text-align:center;padding:48px 24px}.contact h2{font-size:clamp(36px,8vw,66px);line-height:.95;letter-spacing:-3px;margin:0 0 18px}.contact h2 span{color:#858a9a}
-.reveal{opacity:0;transform:translateY(35px);transition:opacity .8s ease,transform .8s ease}.reveal.show{opacity:1;transform:none}
-footer{text-align:center;padding:25px;color:#4f5362;font-size:8px;letter-spacing:2px;border-top:1px solid #ffffff0c}
-@media(min-width:700px){.cursor{display:block}.glass[data-tilt]{transition:transform .12s ease}.float{right:10%}}
-@media(max-width:600px){nav a{display:none}.cards{grid-template-columns:1fr}.card{min-height:225px}.hero{min-height:calc(100svh - 70px)}h1{letter-spacing:-6px}.float{right:0;bottom:12%;transform:scale(.7)}section{padding:62px 0}}
-@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+body{margin:0;color:var(--white);font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;background:radial-gradient(ellipse at 80% 12%,#25115a 0,transparent 34%),radial-gradient(ellipse at 10% 42%,#09244d 0,transparent 32%),var(--bg);overflow-x:hidden}
+body:before,body:after{content:"";position:fixed;width:320px;height:320px;border-radius:50%;filter:blur(95px);opacity:.2;pointer-events:none;z-index:-1;animation:drift 12s ease-in-out infinite alternate}
+body:before{background:#7b42ff;right:-120px;top:10%}
+body:after{background:#00cfff;left:-170px;bottom:0;animation-delay:-4s}
+@keyframes drift{to{transform:translate(35px,-28px) scale(1.15)}}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-5deg)}50%{transform:translateY(-13px) rotate(4deg)}}
+@keyframes shine{to{background-position:200% center}}
+.wrap{width:min(1120px,92%);margin:auto}
+.glass{background:linear-gradient(135deg,#ffffff13,#ffffff04 48%,#5e77ff0d);border:1px solid var(--line);box-shadow:inset 0 1px #ffffff18,0 18px 55px #0005;backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px)}
+nav{position:sticky;top:10px;z-index:5;margin:12px auto 0;border-radius:22px;padding:11px 16px;display:flex;align-items:center;gap:18px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:2px}
+.logo{width:34px;height:34px;display:grid;place-items:center;border-radius:12px;background:linear-gradient(135deg,#5beaff,#6264ff 58%,#e45dff);box-shadow:0 0 25px #6264ff70;font-size:22px;font-weight:1000;font-style:italic}
+.navlinks{display:flex;gap:22px;margin:auto}
+.navlinks a{color:var(--muted);font-size:13px;text-decoration:none}
+.navlinks a:hover{color:white}
+.search{width:190px;border:1px solid #718cff55;border-radius:99px;padding:10px 13px;background:#101a3d99;color:white;outline:none}
+.search:focus{border-color:var(--cyan)}
+.hero{min-height:415px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:15px;padding:45px 0 28px}
+.eyebrow{display:inline-block;border:1px solid #35dfff77;color:var(--cyan);background:#092b4777;padding:8px 13px;border-radius:99px;font-size:11px;font-weight:800;letter-spacing:1.1px}
+.hero h1{font-size:clamp(46px,7vw,80px);line-height:1;margin:18px 0 12px;letter-spacing:-3px;background:linear-gradient(100deg,#fff,#62eaff 40%,#9284ff 70%,#ff9be9);background-size:200% auto;background-clip:text;-webkit-background-clip:text;color:transparent;animation:shine 7s linear infinite}
+.hero h2{font-size:clamp(19px,2.5vw,25px);line-height:1.35;margin:0}
+.hero p{max-width:470px;color:var(--muted);line-height:1.75;font-size:14px}
+.actions{display:flex;gap:11px;flex-wrap:wrap;margin-top:23px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 18px;border-radius:99px;text-decoration:none;color:white;font-weight:750;font-size:13px;border:1px solid var(--line);cursor:pointer;transition:.2s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 9px 28px #426eff45}
+.primary{background:linear-gradient(110deg,#bd42ff,#566cff 55%,#12cfff);border:0}
+.orbital{height:310px;position:relative;display:grid;place-items:center;perspective:900px}
+.orbital:before{content:"";position:absolute;width:225px;height:225px;border-radius:43px;background:linear-gradient(145deg,#52eaff66,#7056ff88 55%,#e05bff55);border:1px solid #b6d8ff99;box-shadow:0 0 48px #5d63ff80,inset 0 0 30px #ffffff38;transform:rotateX(20deg) rotateY(-25deg) rotateZ(12deg);animation:bob 6s ease-in-out infinite}
+.orbital:after{content:"N";position:absolute;font-size:145px;font-weight:1000;font-style:italic;color:transparent;background:linear-gradient(135deg,#fff,#57eaff 48%,#d178ff 85%);background-clip:text;-webkit-background-clip:text;filter:drop-shadow(0 0 23px #4e8aff);transform:rotate(-8deg);animation:bob 6s ease-in-out infinite}
+.ring{position:absolute;width:330px;height:105px;border:3px solid #5de8ffbb;border-radius:50%;transform:rotate(-17deg);box-shadow:0 0 18px #4f82ff,inset 0 0 18px #5c73ff66}
+.bubble{position:absolute;border-radius:50%;background:radial-gradient(circle at 30% 25%,white,#58dfff 16%,#665bff 52%,#d34dff 75%,#20275c);box-shadow:0 0 24px #6265ff88,inset -5px -8px 16px #0008;animation:bob 5s ease-in-out infinite}
+.b1{width:43px;height:43px;top:20px;left:15%}
+.b2{width:25px;height:25px;right:11%;bottom:40px;animation-delay:-2s}
+.b3{width:17px;height:17px;top:24px;right:18%;animation-delay:-1s}
+.benefits{display:grid;grid-template-columns:repeat(4,1fr);padding:20px 14px;border-radius:23px;gap:8px}
+.benefit{display:flex;align-items:center;gap:11px;padding:5px 12px;border-right:1px solid #7a8dc733}
+.benefit:last-child{border:0}
+.ico{flex:0 0 42px;height:42px;border-radius:14px;display:grid;place-items:center;font-size:20px;background:linear-gradient(145deg,#4b5eff55,#13d9ff20);border:1px solid #80caff55;box-shadow:inset 0 1px #ffffff2a}
+.benefit b{font-size:13px}
+.benefit small{display:block;color:var(--muted);font-size:11px;margin-top:4px}
+section.tools{padding:62px 0 18px}
+.sectionhead{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:22px}
+.kicker{color:var(--cyan);font-size:11px;font-weight:850;letter-spacing:1.5px}
+.sectionhead h2{font-size:clamp(27px,4vw,38px);margin:8px 0}
+.sectionhead p{color:var(--muted);margin:0;font-size:13px}
+.toolgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.tool{position:relative;min-height:174px;padding:19px;border-radius:20px;overflow:hidden;transition:transform .22s,border-color .22s;cursor:pointer}
+.tool:before{content:"";position:absolute;inset:-70% 25% auto;height:150px;background:radial-gradient(ellipse,#4a65ff36,transparent 70%);pointer-events:none}
+.tool:hover{transform:translateY(-5px);border-color:#73dfff88}
+.tool .ico{width:45px;height:45px;margin-bottom:13px}
+.tool h3{font-size:14px;margin:0 0 7px}
+.tool p{color:var(--muted);font-size:12px;line-height:1.6;margin:0;max-width:220px}
+.arrow{position:absolute;right:15px;bottom:14px;width:29px;height:29px;border-radius:50%;display:grid;place-items:center;background:#172c5b;border:1px solid #5b7ac455}
+.request{margin:32px 0 50px;padding:24px 26px;border-radius:23px;display:flex;align-items:center;gap:19px}
+.stack{font-size:42px;filter:drop-shadow(0 0 14px #3c7fff)}
+.requestcopy{flex:1}
+.request h3{margin:0 0 6px}
+.request p{margin:0;color:var(--muted);font-size:13px;line-height:1.6}
+footer{border-top:1px solid #6d83cc22;padding:22px 0 30px;color:var(--muted);font-size:12px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.toast{position:fixed;left:50%;bottom:22px;transform:translate(-50%,15px);opacity:0;pointer-events:none;background:#15244c;border:1px solid #6e9bff77;border-radius:13px;padding:12px 17px;z-index:9;box-shadow:0 10px 40px #0008;transition:.25s;font-size:13px;max-width:90%;text-align:center}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:800px){
+.navlinks{display:none}.search{margin-left:auto;width:min(45%,210px)}
+.hero{grid-template-columns:1fr;padding-top:28px;gap:0}
+.hero-copy{text-align:center}.hero p{margin:14px auto}
+.actions{justify-content:center}.orbital{height:250px;grid-row:1}
+.orbital:before{width:175px;height:175px}.orbital:after{font-size:112px}
+.ring{width:270px;height:86px}.benefits{grid-template-columns:repeat(2,1fr)}
+.benefit:nth-child(2){border:0}.toolgrid{grid-template-columns:repeat(2,1fr)}
+.sectionhead{align-items:start;flex-direction:column}.request{flex-wrap:wrap}
+.request .btn{margin-left:auto}
+}
+@media(max-width:430px){
+.brand{font-size:14px;letter-spacing:1px}.logo{width:30px;height:30px}
+.search{font-size:11px;padding:9px;width:42%}.hero h1{letter-spacing:-2px}
+.benefits{padding:12px 7px}.benefit{padding:8px 4px;gap:7px}
+.benefit .ico{flex-basis:34px;height:34px}.benefit small{font-size:10px}
+.toolgrid{gap:10px}.tool{padding:14px;min-height:182px}
+.tool p{font-size:11px}.request .stack{display:none}
+}
+@media(prefers-reduced-motion:reduce){
+*,*:before,*:after{animation:none!important;scroll-behavior:auto!important;transition:none!important}
+}
+/* Optimasi performa HP */
+@media(max-width:800px){
+html{scroll-behavior:auto}
+body:before,body:after{display:none;animation:none;filter:none}
+.glass{backdrop-filter:none;-webkit-backdrop-filter:none;background:linear-gradient(135deg,#18213d,#10182e);box-shadow:inset 0 1px #ffffff12,0 6px 18px #0003}
+.hero h1{animation:none;background-size:auto}
+.orbital:before,.orbital:after,.bubble{animation:none}
+.orbital:before{box-shadow:0 0 22px #5d63ff55,inset 0 0 18px #ffffff25}
+.bubble{box-shadow:inset -3px -4px 8px #0006}
+.tool,.btn,.toast{transition:none}
+.tool:hover,.btn:hover{transform:none;box-shadow:none}
+}
+@media(max-width:430px){
+.tool:before{display:none}
+.tool{box-shadow:inset 0 1px #ffffff10,0 4px 12px #0003}
+}
 </style>
 </head>
 <body>
-<div class="bg"></div><div class="grid"></div><div class="cursor"></div>
-<nav><div class="logo">AL<i>W</i>I</div><div><a href="#about">ABOUT</a><a href="#work">WORK</a><a href="#contact">CONTACT</a></div></nav>
+<div class="wrap">
+<nav class="glass">
+<div class="brand"><span class="logo">N</span>NEXORA</div>
+<div class="navlinks">
+<a href="#home">⌂ Home</a><a href="#tools">⌘ Tools</a><a href="#about">✧ About</a><a href="#contact">✉ Contact</a>
+</div>
+<input class="search" id="search" placeholder="Cari tools..." aria-label="Cari tools">
+</nav>
 <main>
-<section class="hero">
-<div class="status"><b>●</b> ONLINE / CREATING</div>
-<div class="kicker">WELCOME TO THE DIGITAL SPACE</div>
-<h1>ALWI</h1>
-<div class="tag">Create. Edit. <span>Build.</span></div>
-<p class="desc">Personal space buat karya, editing, eksperimen digital, dan project yang lagi dibangun.</p>
-<div class="actions"><a class="btn primary" href="#work">EXPLORE ↗</a><a class="btn ghost" href="#about">ABOUT ME</a></div>
-<div class="float"></div>
-</section>
-
-<section id="about" class="reveal">
-<div class="rule"></div><div class="eyebrow">01 / IDENTITY</div>
-<div class="glass about" data-tilt>
-<h2>Not just a portfolio.<br><span>This is my space.</span></h2>
-<p class="text">Website personal ALWI dengan nuansa gaming/creator dan liquid glass. Dibuat supaya kelihatan hidup tanpa memakai efek berat yang bikin HP ngos-ngosan.</p>
+<header class="hero" id="home">
+<div class="hero-copy">
+<span class="eyebrow">✦ ALL-IN-ONE TOOLS</span>
+<h1>NEXORA</h1>
+<h2>Semua Tools yang Kamu Butuhkan,<br> dalam Satu Tempat.</h2>
+<p>Platform tools modern dengan tampilan futuristik. Cepat, praktis, dan siap dikembangkan sesuai ide lu, bro.</p>
+<div class="actions">
+<a class="btn primary" href="#tools">↗ Mulai Sekarang</a>
+<a class="btn glass" href="#tools">▦ Lihat Tools</a>
 </div>
-</section>
-
-<section id="work" class="reveal">
-<div class="rule"></div><div class="eyebrow">02 / SELECTED WORK</div>
-<div class="cards">
-<article class="glass card" data-tilt><div class="num">PROJECT_01</div><div class="icon">✦</div><h3>Creative Editing</h3><p class="text">Video editing, color grading, visual experiments, dan konten kreatif.</p><a href="#contact">OPEN PROJECT ↗</a></article>
-<article class="glass card" data-tilt><div class="num">PROJECT_02</div><div class="icon">◈</div><h3>Digital Builds</h3><p class="text">Eksperimen website, interface, animasi, dan berbagai ide digital.</p><a href="#contact">OPEN PROJECT ↗</a></article>
 </div>
-</section>
-
-<section class="reveal">
-<div class="rule"></div><div class="eyebrow">03 / CURRENT STATUS</div>
-<div class="stats"><div class="stat"><b>01</b><span>SPACE</span></div><div class="stat"><b>∞</b><span>IDEAS</span></div><div class="stat"><b>24/7</b><span>BUILDING</span></div></div>
-</section>
-
-<section id="contact" class="reveal">
-<div class="glass contact" data-tilt><div class="eyebrow">04 / CONNECTION</div>
-<h2>Let's build<br><span>something crazy.</span></h2>
-<p class="text" style="margin:0 auto 16px">Nanti bagian ini bisa diisi Instagram, TikTok, Discord, project asli, atau kontak lainnya.</p>
-<a class="btn primary" href="mailto:hello@example.com">CONTACT ↗</a>
+<div class="orbital" aria-label="Logo NEXORA 3D">
+<div class="ring"></div><div class="bubble b1"></div><div class="bubble b2"></div><div class="bubble b3"></div>
+</div>
+</header>
+<div class="benefits glass" id="about">
+<div class="benefit"><div class="ico">ϟ</div><div><b>Gratis</b><small>Tanpa biaya tersembunyi</small></div></div>
+<div class="benefit"><div class="ico">⬡</div><div><b>Praktis</b><small>Mudah digunakan</small></div></div>
+<div class="benefit"><div class="ico">◴</div><div><b>Ringan</b><small>Nyaman di HP</small></div></div>
+<div class="benefit"><div class="ico">▣</div><div><b>Responsif</b><small>HP dan PC</small></div></div>
+</div>
+<section class="tools" id="tools">
+<div class="sectionhead">
+<div><div class="kicker">✦ TOOLS</div><h2>Pilih Tools Favoritmu</h2><p>Ini kerangka awalnya. Isi tools nanti lu yang tentuin.</p></div>
+<span class="kicker" id="count">1 TOOL</span>
+</div>
+<div class="toolgrid" id="toolgrid">
+<article class="tool glass" data-name="TikTok HD Uploader" data-url="https://ansyahdaulay129-glitch.github.io/Alwi_Website/nexora_hd_uploader.html" role="link" tabindex="0" aria-label="Buka TikTok HD Uploader">
+<div class="ico" style="color:#62eaff">▶</div>
+<h3>TikTok HD Uploader</h3>
+<p>Cek resolusi video dan siapkan video sebelum upload ke TikTok.</p>
+<span class="arrow">↗</span>
+</article>
+</div>
+<div class="request glass" id="contact">
+<div class="stack">▱</div>
+<div class="requestcopy"><h3>Punya Ide Tool Sendiri?</h3><p>Lu yang tentuin tools-nya, bro. Nanti kita tambahin satu per satu ke NEXORA!</p></div>
+<button class="btn primary" id="requestBtn">✦ Request Tool ↗</button>
 </div>
 </section>
 </main>
-<footer>ALWI // CREATOR SPACE — 2026</footer>
-
+<footer>
+<div class="brand" style="font-size:13px"><span class="logo" style="width:27px;height:27px;font-size:17px">N</span>NEXORA</div>
+<div>Your Tools. Your Power.</div><div>© 2026 NEXORA · Made for you</div>
+</footer>
+</div>
+<div class="toast" id="toast" role="status"></div>
 <script>
-const cursor=document.querySelector('.cursor');
-let mx=innerWidth/2,my=innerHeight/2,cx=mx,cy=my;
-if(cursor){addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY});function loop(){cx+=(mx-cx)*.16;cy+=(my-cy)*.16;cursor.style.left=cx+'px';cursor.style.top=cy+'px';requestAnimationFrame(loop)}loop();
-document.querySelectorAll('a,.glass').forEach(el=>{el.addEventListener('mouseenter',()=>{cursor.style.width='44px';cursor.style.height='44px';cursor.style.background='#6dffb812'});el.addEventListener('mouseleave',()=>{cursor.style.width='26px';cursor.style.height='26px';cursor.style.background='transparent'})})}
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');io.unobserve(e.target)}}),{threshold:.12});
-document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
-if(matchMedia('(min-width:700px)').matches){
-document.querySelectorAll('[data-tilt]').forEach(card=>{
-card.addEventListener('mousemove',e=>{const r=card.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;card.style.transform=`perspective(900px) rotateX(${-y*5}deg) rotateY(${x*5}deg) translateY(-3px)`});
-card.addEventListener('mouseleave',()=>card.style.transform='');
-})}
+const search=document.getElementById('search');
+const cards=[...document.querySelectorAll('.tool')];
+const count=document.getElementById('count');
+const toast=document.getElementById('toast');
+let toastTimer;
+function notify(msg){
+toast.textContent=msg;
+toast.classList.add('show');
+clearTimeout(toastTimer);
+toastTimer=setTimeout(()=>toast.classList.remove('show'),2600);
+}
+search.addEventListener('input',()=>{
+const q=search.value.trim().toLowerCase();
+let n=0;
+cards.forEach(c=>{
+const show=(c.dataset.name+' '+c.innerText).toLowerCase().includes(q);
+c.style.display=show?'':'none';
+if(show)n++;
+});
+count.textContent=n+' TOOLS';
+});
+cards.forEach(c=>{
+const openTool=()=>{
+if(c.dataset.url){window.location.href=c.dataset.url;return;}
+notify(c.dataset.name+' masih berupa placeholder. Nanti kita bikin fiturnya sesuai pilihan lu!');
+};
+c.addEventListener('click',openTool);
+c.addEventListener('keydown',e=>{
+if((e.key==='Enter'||e.key===' ')&&c.dataset.url){e.preventDefault();openTool();}
+});
+});
+document.getElementById('requestBtn').addEventListener('click',()=>{
+const idea=prompt('Tool apa yang mau lu tambahin, bro?');
+if(idea&&idea.trim())notify('Sip! Tulis ide "'+idea.trim()+'" di chat biar kita bisa bikin fiturnya.');
+});
 </script>
 </body>
 </html>
