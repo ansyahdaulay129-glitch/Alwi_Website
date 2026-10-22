@@ -1,23 +1,202 @@
+
 <!doctype html>
 <html lang="id">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#070b13">
-<title>NEXORA HD — TikTok Video Prep</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#07090f">
+<title>NEXORA HD v2 — Video Quality Lab</title>
 <style>
-:root{--bg:#070b13;--panel:#111b2ddd;--line:#34415c;--text:#eef5ff;--muted:#9aacc7;--cyan:#54e5ff;--violet:#8b7cff;--green:#74f0bd}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 15% 0%,#13274a,transparent 40%),radial-gradient(ellipse at 95% 25%,#25154a,transparent 35%),var(--bg);color:var(--text);font:15px/1.5 system-ui,sans-serif;min-height:100vh}.wrap{width:min(900px,100%);margin:auto;padding:22px 16px 45px}.nav{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:30px}.brand{display:flex;align-items:center;gap:10px;font-weight:850;font-size:19px}.logo{width:40px;height:40px;border:1px solid #5be7ff7a;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,#38dfff24,#917cff38);box-shadow:0 0 28px #46cfff22}.tag{font-size:10px;color:var(--cyan);border:1px solid #54e5ff4d;padding:5px 9px;border-radius:99px;letter-spacing:1px}.hero{text-align:center;margin:15px auto 25px;max-width:650px}.eyebrow{color:var(--cyan);font-size:12px;letter-spacing:2px;font-weight:800}.hero h1{font-size:clamp(36px,8vw,62px);line-height:1.02;letter-spacing:-2px;margin:12px 0}.gradient{background:linear-gradient(90deg,#fff,#68e8ff 45%,#a69aff);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{color:var(--muted);max-width:520px;margin:auto}.panel{background:var(--panel);border:1px solid var(--line);border-radius:24px;padding:20px;box-shadow:0 20px 70px #0005;backdrop-filter:blur(18px)}.upload{display:block;border:1.5px dashed #5acfffa1;border-radius:19px;padding:28px 16px;text-align:center;background:linear-gradient(140deg,#42dfff0b,#8e70ff0b);cursor:pointer}.symbol{font-size:34px}.upload h2{margin:0 0 5px;font-size:18px}.muted{color:var(--muted);font-size:13px}.btn{border:0;border-radius:13px;padding:12px 16px;background:linear-gradient(100deg,#39d7fa,#8a7cff);color:#07101d;font-weight:850;font-size:14px;cursor:pointer;text-decoration:none;display:inline-block}.secondary{background:#18243a!important;color:var(--text)!important;border:1px solid var(--line)!important}.actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:15px}input[type=file]{display:none}#results{display:none;margin-top:16px}.filehead{display:flex;align-items:center;gap:12px}.fileicon{width:44px;height:44px;border-radius:13px;background:#142a40;display:grid;place-items:center;font-size:22px;flex-shrink:0}.filename{font-weight:750;overflow-wrap:anywhere}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}.metric{border:1px solid var(--line);border-radius:14px;padding:12px;background:#080f1b88;min-width:0}.metric .label{font-size:11px;color:var(--muted)}.metric strong{display:block;font-size:17px;margin-top:4px;overflow-wrap:anywhere}.sectiontitle{font-size:17px;margin:22px 0 10px}.checklist{display:grid;gap:9px}.check{display:flex;gap:10px;padding:11px 12px;border:1px solid var(--line);border-radius:13px;background:#0b1321a8}.check i{font-style:normal;color:var(--green);font-weight:900}.check b{display:block;font-size:13px}.check small{display:block;color:var(--muted);font-size:12px;margin-top:2px}.notice{margin-top:16px;border:1px solid #f4c46a4c;background:#f4c46a0b;padding:13px;border-radius:14px;color:#e9d8b0;font-size:12px}.guide{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.step{padding:14px;border:1px solid var(--line);border-radius:15px;background:#0b1321a8}.num{color:var(--cyan);font-weight:900;font-size:12px}.step b{display:block;margin:6px 0;font-size:13px}.step p{font-size:12px;color:var(--muted);margin:0}.foot{text-align:center;color:#7386a3;font-size:11px;margin-top:24px}@media(max-width:560px){.wrap{padding:17px 13px 35px}.panel{padding:14px}.metrics{grid-template-columns:repeat(2,1fr)}.guide{grid-template-columns:1fr}.hero h1{letter-spacing:-1.5px}.tag{font-size:9px}}
-</style></head><body><div class="wrap">
-<header class="nav"><div class="brand"><div class="logo">N</div><span>NEXORA <span style="color:var(--cyan)">HD</span></span></div><div class="tag">VIDEO PREP TOOL</div></header>
-<section class="hero"><div class="eyebrow">KEEP IT CRISP ✦</div><h1>Post HD.<br><span class="gradient">Not blurry.</span></h1><p>Siapkan video sebelum upload ke TikTok. Cek detail video dan ikuti langkah untuk menjaga kualitas semaksimal mungkin.</p></section>
-<main class="panel"><label class="upload" for="videoInput"><div class="symbol">⇧</div><h2>Pilih video kamu</h2><div class="muted">MP4, MOV, atau WebM · diproses lokal di browser</div><div class="actions"><span class="btn">Pilih dari perangkat</span></div></label><input id="videoInput" type="file" accept="video/*">
-<div id="results"><div class="filehead"><div class="fileicon">▶</div><div style="min-width:0;flex:1"><div class="filename" id="filename"></div><div class="muted" id="filesize"></div></div><button class="btn secondary" id="changeBtn">Ganti</button></div>
-<div class="metrics"><div class="metric"><div class="label">RESOLUSI</div><strong id="resolution">—</strong></div><div class="metric"><div class="label">DURASI</div><strong id="duration">—</strong></div><div class="metric"><div class="label">RASIO</div><strong id="ratio">—</strong></div><div class="metric"><div class="label">UKURAN FILE</div><strong id="size2">—</strong></div><div class="metric"><div class="label">ORIENTASI</div><strong id="orientation">—</strong></div><div class="metric"><div class="label">STATUS</div><strong id="status" style="color:var(--green)">Siap dicek</strong></div></div>
-<h3 class="sectiontitle">Rekomendasi untuk video kamu</h3><div class="checklist" id="recommendations"></div>
-<div class="actions"><a class="btn" href="https://www.tiktok.com/tiktokstudio" target="_blank" rel="noopener noreferrer">Lanjut ke TikTok ↗</a><button class="btn secondary" id="downloadBtn">Download video asli</button></div>
-<div class="notice">Catatan: download menyimpan video asli tanpa re-encode. NEXORA tidak bisa menonaktifkan kompresi TikTok atau menjamin kualitas akhir. Video tidak diunggah ke server oleh halaman ini.</div></div></main>
-<h3 class="sectiontitle">Cara upload dengan kualitas maksimal</h3><div class="guide"><div class="step"><div class="num">STEP 01</div><b>Gunakan file sumber terbaik</b><p>Pilih hasil ekspor asli, bukan video yang sudah berkali-kali dikirim atau diunduh ulang.</p></div><div class="step"><div class="num">STEP 02</div><b>Aktifkan kualitas tinggi</b><p>Di layar posting TikTok, buka opsi lanjutan dan aktifkan opsi upload kualitas tinggi jika tersedia.</p></div><div class="step"><div class="num">STEP 03</div><b>Cek sebelum posting</b><p>Gunakan koneksi stabil dan tunggu pemrosesan selesai. Opsi bisa berbeda antar akun/versi aplikasi.</p></div></div><div class="foot">NEXORA HD · Your Tools. Your Power. · Prototype v1</div></div>
+:root{color-scheme:dark;--bg:#07090f;--panel:#131827;--line:#303750;--text:#f4f7ff;--muted:#a4aec8;--cyan:#65e7ff;--green:#8bffbf;--purple:#9e86ff}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 12% 0%,#325bbe3d,transparent 40%),radial-gradient(ellipse at 90% 25%,#6b3ac233,transparent 38%),var(--bg);color:var(--text);font:15px/1.55 system-ui,sans-serif;padding:22px 14px 40px}
+.wrap{width:min(760px,100%);margin:auto}
+.top{display:flex;align-items:center;gap:12px;margin:4px 0 22px}
+.logo{width:45px;height:45px;border:1px solid #ffffff2a;border-radius:15px;background:linear-gradient(145deg,#65e7ff33,#9e86ff33);display:grid;place-items:center;font-weight:900;color:var(--cyan)}
+h1{font-size:clamp(24px,5vw,34px);line-height:1.12;margin:0}
+.sub,.desc,.hint{color:var(--muted)}
+.sub{margin:5px 0 0;font-size:13px}
+.pill{display:inline-flex;color:var(--green);border:1px solid #8bffbf40;padding:5px 10px;border-radius:999px;font-size:11px;margin-bottom:12px}
+.card{border:1px solid var(--line);background:linear-gradient(145deg,#1a2036e0,#0c0f19e8);border-radius:22px;padding:19px;margin:13px 0;box-shadow:0 16px 45px #0003}
+h2{font-size:17px;margin:0 0 5px}
+.desc{font-size:13px;margin:0 0 15px}
+.drop{border:1px dashed #65e7ff70;border-radius:17px;background:#65e7ff08;padding:22px 15px;text-align:center}
+.file-icon{font-size:30px}
+input[type=file]{display:none}
+.btn{border:0;border-radius:13px;padding:12px 15px;background:linear-gradient(100deg,var(--cyan),var(--purple));color:#071018;font-weight:850;font-size:14px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:45px;text-decoration:none}
+.btn.secondary{background:#ffffff0b;border:1px solid var(--line);color:var(--text)}
+.btn:disabled{opacity:.42;cursor:not-allowed}
+.actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:13px}
+.hint{font-size:12px;margin-top:10px}
+.metrics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:14px}
+.metric{border:1px solid #ffffff12;background:#ffffff06;border-radius:14px;padding:12px;min-width:0}
+.label{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.7px}
+.value{font-size:18px;font-weight:800;overflow-wrap:anywhere;margin-top:3px}
+.small{font-size:11px;color:var(--muted)}
+.status{border-radius:13px;padding:12px 13px;background:#65e7ff0c;border:1px solid #65e7ff2b;color:#d8f8ff;font-size:13px;margin-top:13px}
+.steps,.checklist{display:grid;gap:10px}
+.step{display:grid;grid-template-columns:32px 1fr;gap:11px}
+.num{width:30px;height:30px;border-radius:10px;background:#9e86ff1b;border:1px solid #9e86ff4c;color:#c9bcff;display:grid;place-items:center;font-weight:850}
+.step strong{display:block;font-size:14px}
+.step p{margin:0;color:var(--muted);font-size:13px}
+.check{display:flex;gap:10px;align-items:flex-start;font-size:13px}
+.check input{accent-color:var(--cyan);margin-top:4px}
+.warn{border-color:#ffca7a35;background:#ffca7a09;color:#ffe5b7}
+footer{text-align:center;color:#75809d;font-size:11px;padding:18px 8px}
+.hidden{display:none!important}
+@media(min-width:600px){.metrics{grid-template-columns:repeat(4,minmax(0,1fr))}.card{padding:22px}}
+</style>
+</head>
+<body>
+<main class="wrap">
+<header class="top">
+<div class="logo">N</div>
+<div><h1>NEXORA <span style="color:var(--cyan)">HD v2</span></h1><p class="sub">Video Quality Lab · Your Tools. Your Power.</p></div>
+</header>
+
+<div class="pill">● PROTOTIPE V2 · VIDEO ANALYZER</div>
+
+<section class="card">
+<h2>01 / Smart Video Analyzer</h2>
+<p class="desc">Cek resolusi, durasi, ukuran file, dan perkiraan bitrate video sebelum upload.</p>
+<div class="drop">
+<div class="file-icon">◈</div>
+<strong id="pickTitle">Pilih video dari Galeri atau folder</strong>
+<div class="hint">Analisis berjalan di browser HP lu.</div>
+<div class="actions" style="justify-content:center">
+<label class="btn" for="videoFile">＋ Pilih Video</label>
+<input id="videoFile" type="file" accept="video/*">
+</div>
+</div>
+<div id="metrics" class="metrics hidden">
+<div class="metric"><div class="label">Resolusi</div><div class="value" id="resolution">—</div><div class="small" id="resHint"></div></div>
+<div class="metric"><div class="label">Durasi</div><div class="value" id="duration">—</div><div class="small">Panjang video</div></div>
+<div class="metric"><div class="label">Ukuran file</div><div class="value" id="size">—</div><div class="small">Ukuran asli</div></div>
+<div class="metric"><div class="label">Bitrate rata-rata*</div><div class="value" id="bitrate">—</div><div class="small">Estimasi</div></div>
+</div>
+<div id="analysis" class="status hidden" aria-live="polite"></div>
+<div class="actions">
+<button id="downloadBtn" class="btn secondary" disabled>↓ Download File Asli</button>
+<button id="studioBtn" class="btn">Buka TikTok Studio ↗</button>
+</div>
+<p class="hint">Download opsional. Lu bisa langsung pilih video asli dari Galeri atau folder ekspor.</p>
+</section>
+
+<section class="card">
+<h2>02 / Original Quality Protection</h2>
+<p class="desc">NEXORA tidak mengubah resolusi atau melakukan encode ulang.</p>
+<div class="status">✓ File dianalisis di browser. Tombol download menyimpan file yang sama, bukan versi yang ditajamkan.</div>
+<p class="hint">*Bitrate adalah perkiraan total berdasarkan ukuran file dan durasi, bukan pembacaan bitrate video yang akurat.</p>
+</section>
+
+<section class="card">
+<h2>03 / TikTok Upload Guide</h2>
+<p class="desc">Checklist supaya lu bisa memeriksa kualitas video sebelum dan sesudah upload.</p>
+<div class="checklist">
+<label class="check"><input type="checkbox"><span>Gunakan file video asli, bukan salinan yang sudah dikompres aplikasi chat.</span></label>
+<label class="check"><input type="checkbox"><span>Aktifkan opsi kualitas tinggi atau Upload HD jika tersedia.</span></label>
+<label class="check"><input type="checkbox"><span>Gunakan koneksi internet yang stabil.</span></label>
+<label class="check"><input type="checkbox"><span>Tunggu pemrosesan video selesai sebelum mengecek hasil.</span></label>
+<label class="check"><input type="checkbox"><span>Periksa apakah penghemat data membatasi kualitas pemutaran.</span></label>
+<label class="check"><input type="checkbox"><span>Bandingkan hasil di perangkat atau koneksi lain.</span></label>
+</div>
+<div class="status warn">Catatan: TikTok tetap bisa mengompres video. NEXORA tidak bisa menjamin hasil upload selalu tajam.</div>
+</section>
+
+<section class="card">
+<h2>04 / Tes yang Adil</h2>
+<div class="steps">
+<div class="step"><div class="num">1</div><div><strong>Cek file</strong><p>Pilih video dan catat resolusi serta ukuran file.</p></div></div>
+<div class="step"><div class="num">2</div><div><strong>Upload file yang sama</strong><p>Pilih video asli langsung dari Galeri atau folder ekspor di TikTok Studio.</p></div></div>
+<div class="step"><div class="num">3</div><div><strong>Periksa hasil</strong><p>Tunggu pemrosesan lalu bandingkan detailnya dengan video di Galeri.</p></div></div>
+</div>
+</section>
+<footer>NEXORA HD v2 · Video Quality Lab</footer>
+</main>
+
 <script>
-const input=document.getElementById('videoInput'),results=document.getElementById('results');let currentFile=null,objectUrl=null;const $=id=>document.getElementById(id);
-function bytes(n){if(n<1024)return n+' B';let u=['KB','MB','GB'],i=-1;do{n/=1024;i++}while(n>=1024&&i<u.length-1);return n.toFixed(2)+' '+u[i]}function time(s){return Number.isFinite(s)?Math.floor(s/60)+':'+String(Math.floor(s%60)).padStart(2,'0'):'N/A'}
-function check(title,desc){const d=document.createElement('div');d.className='check';const i=document.createElement('i');i.textContent='✓';const box=document.createElement('div'),b=document.createElement('b'),sm=document.createElement('small');b.textContent=title;sm.textContent=desc;box.append(b,sm);d.append(i,box);$('recommendations').append(d)}
-function showFile(file){if(!file)return;if(!file.type.startsWith('video/')){alert('Pilih file video ya, bro.');return}currentFile=file;if(objectUrl)URL.revokeObjectURL(objectUrl);objectUrl=URL.createObjectURL(file);$('filename').textContent=file.name;$('filesize').textContent=file.type+' · '+bytes(file.size);$('size2').textContent=bytes(file.size);const v=document.createElement('video');v.preload='metadata';v.src=objectUrl;v.onloadedmetadata=()=>{let w=v.videoWidth,h=v.videoHeight,r=w/h;$('resolution').textContent=w+' × '+h;$('duration').textContent=time(v.duration);$('ratio').textContent=Math.abs(r-9/16)<.04?'9:16':Math.abs(r-1)<.04?'1:1':Math.abs(r-16/9)<.04?'16:9':r.toFixed(2)+':1';$('orientation').textContent=w>h?'Landscape':w<h?'Portrait':'Square';$('status').textContent=(w>=1080&&h>=1920)||(h>=1080&&w>=1920)?'Resolusi tinggi':'Perlu dicek';$('recommendations').innerHTML='';if(w<720||h<720)check('Periksa resolusi sumber','File ini beresolusi relatif rendah. Gunakan ekspor asli beresolusi lebih tinggi jika tersedia.');else check('Resolusi sumber terdeteksi',w+' × '+h+'. Memperbesar video kecil tidak menambah detail asli.');check('Cek framing 9:16','Format vertikal biasanya cocok untuk video layar penuh. Jangan crop jika merusak komposisi.');check('Pertahankan file sumber','NEXORA menyimpan file asli tanpa kompres ulang. Hindari ekspor berulang kali.');check('Aktifkan upload kualitas tinggi','Di TikTok, cek opsi kualitas tinggi pada layar posting jika tersedia.');results.style.display='block'};v.onerror=()=>{results.style.display='block';$('resolution').textContent='Tidak terbaca';$('duration').textContent='N/A';$('ratio').textContent='N/A';$('orientation').textContent='N/A';$('status').textContent='File dipilih';$('recommendations').innerHTML='';check('File terpilih','Metadata tidak terbaca, tetapi kamu tetap bisa memilih file asli di TikTok.')}}input.addEventListener('change',e=>showFile(e.target.files[0]));$('changeBtn').addEventListener('click',()=>input.click());$('downloadBtn').addEventListener('click',()=>{if(!currentFile)return;let a=document.createElement('a');a.href=objectUrl;a.download=currentFile.name;document.body.append(a);a.click();a.remove()});
-</script></body></html>
+(() => {
+const input = document.getElementById('videoFile');
+const metrics = document.getElementById('metrics');
+const analysis = document.getElementById('analysis');
+const downloadBtn = document.getElementById('downloadBtn');
+let currentFile = null;
+let objectUrl = null;
+
+const fmtSize = bytes => bytes < 1048576
+? (bytes / 1024).toFixed(0) + ' KB'
+: (bytes / 1048576).toFixed(2) + ' MB';
+
+const fmtDuration = sec => {
+if (!Number.isFinite(sec)) return 'Tidak terbaca';
+return Math.floor(sec / 60) + ':' + String(Math.floor(sec % 60)).padStart(2, '0');
+};
+
+const fmtRate = bps => bps >= 1000000
+? (bps / 1000000).toFixed(2) + ' Mbps'
+: (bps / 1000).toFixed(0) + ' kbps';
+
+input.addEventListener('change', () => {
+const file = input.files && input.files[0];
+if (!file) return;
+currentFile = file;
+downloadBtn.disabled = false;
+document.getElementById('pickTitle').textContent = file.name;
+
+if (objectUrl) URL.revokeObjectURL(objectUrl);
+objectUrl = URL.createObjectURL(file);
+
+const video = document.createElement('video');
+video.preload = 'metadata';
+video.muted = true;
+video.playsInline = true;
+
+video.onloadedmetadata = () => {
+const w = video.videoWidth, h = video.videoHeight, dur = video.duration;
+document.getElementById('resolution').textContent = w && h ? `${w} × ${h}` : 'Tidak terbaca';
+document.getElementById('resHint').textContent = h >= 2160 ? '4K / UHD' : h >= 1080 ? 'Full HD atau lebih' : h >= 720 ? 'HD' : 'Di bawah HD';
+document.getElementById('duration').textContent = fmtDuration(dur);
+document.getElementById('size').textContent = fmtSize(file.size);
+document.getElementById('bitrate').textContent = dur > 0 ? fmtRate(file.size * 8 / dur) : '—';
+metrics.classList.remove('hidden');
+
+let notes = [];
+if (w >= 1920 && h >= 1080) notes.push('Resolusi terdeteksi Full HD atau lebih.');
+else notes.push('Resolusi di bawah 1920×1080 atau tidak terbaca. Cek pengaturan ekspor video.');
+if (file.size * 8 / Math.max(dur, 1) < 3000000) notes.push('Perkiraan bitrate relatif rendah; ini bukan patokan mutlak.');
+else notes.push('Perkiraan bitrate tercatat. Bitrate tinggi tidak menjamin hasil TikTok tajam.');
+notes.push('NEXORA tidak mengubah video. TikTok tetap bisa melakukan kompresi.');
+analysis.textContent = notes.join(' ');
+analysis.classList.remove('hidden');
+URL.revokeObjectURL(objectUrl);
+objectUrl = null;
+};
+
+video.onerror = () => {
+metrics.classList.remove('hidden');
+analysis.textContent = 'Metadata video tidak bisa dibaca browser ini. File asli tetap bisa diunduh.';
+analysis.classList.remove('hidden');
+};
+
+video.src = objectUrl;
+});
+
+downloadBtn.addEventListener('click', () => {
+if (!currentFile) return;
+const url = URL.createObjectURL(currentFile);
+const a = document.createElement('a');
+a.href = url;
+a.download = currentFile.name || 'nexora-original-video';
+document.body.appendChild(a);
+a.click();
+a.remove();
+setTimeout(() => URL.revokeObjectURL(url), 1500);
+});
+
+document.getElementById('studioBtn').addEventListener('click', () => {
+window.open('https://www.tiktok.com/tiktokstudio', '_blank', 'noopener,noreferrer');
+});
+})();
+</script>
+</body>
+</html>
