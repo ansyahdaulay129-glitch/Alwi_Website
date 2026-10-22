@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="id">
 <head>
@@ -76,23 +77,25 @@ footer{border-top:1px solid #6d83cc22;padding:22px 0 30px;color:var(--muted);fon
 .hero-copy{text-align:center}.hero p{margin:14px auto}
 .actions{justify-content:center}.orbital{height:250px;grid-row:1}
 .orbital:before{width:175px;height:175px}.orbital:after{font-size:112px}
-.ring{width:270px;height:86px}.benefits{grid-template-columns:repeat(2,1fr)}
-.benefit:nth-child(2){border:0}.toolgrid{grid-template-columns:repeat(2,1fr)}
-.sectionhead{align-items:start;flex-direction:column}.request{flex-wrap:wrap}
-.request .btn{margin-left:auto}
+.ring{width:270px;height:86px}
+.benefits{grid-template-columns:repeat(2,1fr)}
+.benefit:nth-child(2){border:0}
+.toolgrid{grid-template-columns:repeat(2,1fr)}
+.sectionhead{align-items:start;flex-direction:column}
+.request{flex-wrap:wrap}.request .btn{margin-left:auto}
 }
 @media(max-width:430px){
 .brand{font-size:14px;letter-spacing:1px}.logo{width:30px;height:30px}
-.search{font-size:11px;padding:9px;width:42%}.hero h1{letter-spacing:-2px}
-.benefits{padding:12px 7px}.benefit{padding:8px 4px;gap:7px}
-.benefit .ico{flex-basis:34px;height:34px}.benefit small{font-size:10px}
+.search{font-size:11px;padding:9px;width:42%}
+.hero h1{letter-spacing:-2px}
+.benefits{padding:12px 7px}
+.benefit{padding:8px 4px;gap:7px}
+.benefit .ico{flex-basis:34px;height:34px}
+.benefit small{font-size:10px}
 .toolgrid{gap:10px}.tool{padding:14px;min-height:182px}
 .tool p{font-size:11px}.request .stack{display:none}
 }
-@media(prefers-reduced-motion:reduce){
-*,*:before,*:after{animation:none!important;scroll-behavior:auto!important;transition:none!important}
-}
-/* Optimasi performa HP */
+/* Optimasi performa untuk HP */
 @media(max-width:800px){
 html{scroll-behavior:auto}
 body:before,body:after{display:none;animation:none;filter:none}
@@ -107,6 +110,9 @@ body:before,body:after{display:none;animation:none;filter:none}
 @media(max-width:430px){
 .tool:before{display:none}
 .tool{box-shadow:inset 0 1px #ffffff10,0 4px 12px #0003}
+}
+@media(prefers-reduced-motion:reduce){
+*,*:before,*:after{animation:none!important;scroll-behavior:auto!important;transition:none!important}
 }
 </style>
 </head>
@@ -135,25 +141,29 @@ body:before,body:after{display:none;animation:none;filter:none}
 <div class="ring"></div><div class="bubble b1"></div><div class="bubble b2"></div><div class="bubble b3"></div>
 </div>
 </header>
+
 <div class="benefits glass" id="about">
 <div class="benefit"><div class="ico">ϟ</div><div><b>Gratis</b><small>Tanpa biaya tersembunyi</small></div></div>
 <div class="benefit"><div class="ico">⬡</div><div><b>Praktis</b><small>Mudah digunakan</small></div></div>
 <div class="benefit"><div class="ico">◴</div><div><b>Ringan</b><small>Nyaman di HP</small></div></div>
 <div class="benefit"><div class="ico">▣</div><div><b>Responsif</b><small>HP dan PC</small></div></div>
 </div>
+
 <section class="tools" id="tools">
 <div class="sectionhead">
 <div><div class="kicker">✦ TOOLS</div><h2>Pilih Tools Favoritmu</h2><p>Ini kerangka awalnya. Isi tools nanti lu yang tentuin.</p></div>
 <span class="kicker" id="count">1 TOOL</span>
 </div>
+
 <div class="toolgrid" id="toolgrid">
-<article class="tool glass" data-name="TikTok HD Uploader" data-url="https://ansyahdaulay129-glitch.github.io/Alwi_Website/nexora_hd_uploader.html" role="link" tabindex="0" aria-label="Buka TikTok HD Uploader">
+<article class="tool glass" data-name="NEXORA HD v2" data-url="nexora_hd_v2.html" role="link" tabindex="0" aria-label="Buka NEXORA HD v2">
 <div class="ico" style="color:#62eaff">▶</div>
-<h3>TikTok HD Uploader</h3>
-<p>Cek resolusi video dan siapkan video sebelum upload ke TikTok.</p>
+<h3>NEXORA HD v2</h3>
+<p>Analisis resolusi video, cek file asli, dan siapkan video sebelum upload.</p>
 <span class="arrow">↗</span>
 </article>
 </div>
+
 <div class="request glass" id="contact">
 <div class="stack">▱</div>
 <div class="requestcopy"><h3>Punya Ide Tool Sendiri?</h3><p>Lu yang tentuin tools-nya, bro. Nanti kita tambahin satu per satu ke NEXORA!</p></div>
@@ -161,24 +171,28 @@ body:before,body:after{display:none;animation:none;filter:none}
 </div>
 </section>
 </main>
+
 <footer>
 <div class="brand" style="font-size:13px"><span class="logo" style="width:27px;height:27px;font-size:17px">N</span>NEXORA</div>
 <div>Your Tools. Your Power.</div><div>© 2026 NEXORA · Made for you</div>
 </footer>
 </div>
 <div class="toast" id="toast" role="status"></div>
+
 <script>
 const search=document.getElementById('search');
 const cards=[...document.querySelectorAll('.tool')];
 const count=document.getElementById('count');
 const toast=document.getElementById('toast');
 let toastTimer;
+
 function notify(msg){
 toast.textContent=msg;
 toast.classList.add('show');
 clearTimeout(toastTimer);
 toastTimer=setTimeout(()=>toast.classList.remove('show'),2600);
 }
+
 search.addEventListener('input',()=>{
 const q=search.value.trim().toLowerCase();
 let n=0;
@@ -189,16 +203,24 @@ if(show)n++;
 });
 count.textContent=n+' TOOLS';
 });
+
 cards.forEach(c=>{
 const openTool=()=>{
-if(c.dataset.url){window.location.href=c.dataset.url;return;}
+if(c.dataset.url){
+window.location.href=c.dataset.url;
+return;
+}
 notify(c.dataset.name+' masih berupa placeholder. Nanti kita bikin fiturnya sesuai pilihan lu!');
 };
 c.addEventListener('click',openTool);
 c.addEventListener('keydown',e=>{
-if((e.key==='Enter'||e.key===' ')&&c.dataset.url){e.preventDefault();openTool();}
+if((e.key==='Enter'||e.key===' ')&&c.dataset.url){
+e.preventDefault();
+openTool();
+}
 });
 });
+
 document.getElementById('requestBtn').addEventListener('click',()=>{
 const idea=prompt('Tool apa yang mau lu tambahin, bro?');
 if(idea&&idea.trim())notify('Sip! Tulis ide "'+idea.trim()+'" di chat biar kita bisa bikin fiturnya.');
